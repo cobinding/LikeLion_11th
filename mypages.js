@@ -1,11 +1,10 @@
-
 // 괄호 안에는 가져올 html의 id를 parameter로 넘겨준다.
-const addToDoButton = document.getElementById('addToDoBtn');
-const toDoContainer = document.getElementById('toDoContainer');
+const addAskBtn = document.getElementById('addAskBtn');
+const Profile = document.getElementById('profile');
 const inputField = document.getElementById('inputField');
 
 // click event가 발생했을 때 func 실행
-addToDoButton.addEventListener('click', function() {
+addAskBtn.addEventListener('click', function() {
     // paragraph 변수에 p tag 요소 생성 (입력될 애들..)
     const paragraph = document.createElement('p');
 
@@ -18,9 +17,8 @@ addToDoButton.addEventListener('click', function() {
     paragraph.innerText = inputField.value;
 
     //js에서 만든 class를 html에 append해줘야함
-    toDoContainer.appendChild(paragraph);
+    Profile.appendChild(paragraph);
 
-    
     // 입력창 내용 입력 후 없애는 것
 
     // input field 초기화
@@ -34,9 +32,7 @@ addToDoButton.addEventListener('click', function() {
     })
 
     paragraph.addEventListener('dblclick', function() {
-        toDoContainer.removeChild(paragraph);
+        Profile.removeChild(paragraph);
     })
 
-
-
-}) 
+})
